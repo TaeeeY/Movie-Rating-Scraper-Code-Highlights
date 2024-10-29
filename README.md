@@ -54,8 +54,8 @@ const records = xlsx.utils.sheet_to_json(ws);
 ```
 
 
-![image](https://github.com/user-attachments/assets/7b84a889-601f-4fb9-8267-089cccfc54a9)
-결과물 입니다.
+![image](https://github.com/user-attachments/assets/7b84a889-601f-4fb9-8267-089cccfc54a9)<br>
+**결과물 입니다.**
 
 
 
