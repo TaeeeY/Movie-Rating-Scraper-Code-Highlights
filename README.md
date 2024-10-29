@@ -15,7 +15,7 @@ xlsx 모듈을 사용하여 엑셀 파일을 읽고, 시트 데이터를 JSON �
 >    const browser = await puppeteer.launch({ headless: false });<br>
 >    const page = await browser.newPage();<br>
 >    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36');<br>
-
+>
 >    // 시트에 '평점' 헤더 추가<br>
 >    add_to_sheet(ws, 'C1', 's', '평점');<br>
 >
@@ -25,13 +25,13 @@ xlsx 모듈을 사용하여 엑셀 파일을 읽고, 시트 데이터를 JSON �
 >            const score = document.querySelector('.info_group:nth-of-type(3) dd');<br>
 >            return score ? score.textContent.trim() : null;<br>
 >        });<br>
-
->        if (text) {<br>
->            console.log(r.제목, '평점', text);<br>
->            add_to_sheet(ws, `C${i + 2}`, 'n', parseFloat(text)); // 엑셀 파일에 평점 추가<br>
->        }<br>
->        await new Promise(resolve => setTimeout(resolve, 1000)); // 요청 간 지연<br>
->    }<br>
+>
+>        if (text) {
+>            console.log(r.제목, '평점', text);
+>            add_to_sheet(ws, `C${i + 2}`, 'n', parseFloat(text)); // 엑셀 파일에 평점 추가<
+>        }
+>        await new Promise(resolve => setTimeout(resolve, 1000)); // 요청 간 지연
+>    }
 >    await browser.close();<br>
 >    xlsx.writeFile(workbook, 'xlsx/result.xlsx'); // 결과를 엑셀 파일로 저장<br>
 > };<br>
