@@ -25,15 +25,15 @@
 >            const score = document.querySelector('.info_group:nth-of-type(3) dd');<br>
 >            return score ? score.textContent.trim() : null;<br>
 >        });<br>
->```
->        if (text) {<br>
->            console.log(r.제목, '평점', text);<br>
->            add_to_sheet(ws, `C${i + 2}`, 'n', parseFloat(text)); // 엑셀 파일에 평점 추가<br>
->        }<br>
->        await new Promise(resolve => setTimeout(resolve, 1000)); // 요청 간 지연<br>
+> ```javascript
+>        if (text) {
+>            console.log(r.제목, '평점', text);
+>            add_to_sheet(ws, `C${i + 2}`, 'n', parseFloat(text)); // 엑셀 파일에 평점 추가
+>        }
+>        await new Promise(resolve => setTimeout(resolve, 1000)); // 요청 간 지연
 >    }<br>
->    await browser.close();<br>
->    xlsx.writeFile(workbook, 'xlsx/result.xlsx'); // 결과를 엑셀 파일로 저장<br>
+>    await browser.close();
+>    xlsx.writeFile(workbook, 'xlsx/result.xlsx'); // 결과를 엑셀 파일로 저장
 > };<br>
 
 
