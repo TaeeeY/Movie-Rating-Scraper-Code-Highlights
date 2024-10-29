@@ -28,7 +28,7 @@
 >
 >        if (text) {
 >            console.log(r.제목, '평점', text);
->            add_to_sheet(ws, `C${i + 2}`, 'n', parseFloat(text)); // 엑셀 파일에 평점 추가<
+>            add_to_sheet(ws, `C${i + 2}`, 'n', parseFloat(text)); // 엑셀 파일에 평점 추가
 >        }
 >        await new Promise(resolve => setTimeout(resolve, 1000)); // 요청 간 지연
 >    }
