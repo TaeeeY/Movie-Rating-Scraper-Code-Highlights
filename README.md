@@ -1,5 +1,5 @@
 # 영화 평점 크롤링하기
-
+```javascript
 > const xlsx = require('xlsx'); <br>
 > const add_to_sheet = require('./add_to_sheet');<br>
 > const puppeteer = require('puppeteer');<br>
@@ -25,7 +25,7 @@
 >            const score = document.querySelector('.info_group:nth-of-type(3) dd');<br>
 >            return score ? score.textContent.trim() : null;<br>
 >        });<br>
-> ```javascript
+> 
 >        if (text) {
 >            console.log(r.제목, '평점', text);
 >            add_to_sheet(ws, `C${i + 2}`, 'n', parseFloat(text)); // 엑셀 파일에 평점 추가
