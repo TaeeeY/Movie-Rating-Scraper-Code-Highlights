@@ -25,7 +25,7 @@
 >            const score = document.querySelector('.info_group:nth-of-type(3) dd');<br>
 >            return score ? score.textContent.trim() : null;<br>
 >        });<br>
->
+>```
 >        if (text) {<br>
 >            console.log(r.제목, '평점', text);<br>
 >            add_to_sheet(ws, `C${i + 2}`, 'n', parseFloat(text)); // 엑셀 파일에 평점 추가<br>
