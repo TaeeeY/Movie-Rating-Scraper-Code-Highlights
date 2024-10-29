@@ -1,7 +1,7 @@
 # 영화 평점 크롤링하기
 
 xlsx 모듈을 사용하여 엑셀 파일을 읽고, 시트 데이터를 JSON 형태로 변환하여 각 URL 링크와 제목을 쉽게 접근할 수 있도록 설정했습니다.
-
+```javascript
 const xlsx = require('xlsx'); 
 const add_to_sheet = require('./add_to_sheet');
 const puppeteer = require('puppeteer');
