@@ -25,7 +25,7 @@ xlsx 모듈을 사용하여 엑셀 파일을 읽고, 시트 데이터를 JSON �
 >            const score = document.querySelector('.info_group:nth-of-type(3) dd');<br>
 >            return score ? score.textContent.trim() : null;<br>
 >        });<br>
->
+
 >        if (text) {<br>
 >            console.log(r.제목, '평점', text);<br>
 >            add_to_sheet(ws, `C${i + 2}`, 'n', parseFloat(text)); // 엑셀 파일에 평점 추가<br>
@@ -39,7 +39,7 @@ xlsx 모듈을 사용하여 엑셀 파일을 읽고, 시트 데이터를 JSON �
 
 각 페이지에 접속하여 평점을 크롤링하고, 이를 엑셀 파일에 추가로 저장하는 작업입니다. page.evaluate 내에서 DOM을 통해 원하는 데이터를 추출하고, add_to_sheet 함수를 통해 실시간으로 엑셀 시트에 저장합니다. <br>
 
-if
+
  try {<br>
     await crawler();<br>
 } catch (e) {<br>
