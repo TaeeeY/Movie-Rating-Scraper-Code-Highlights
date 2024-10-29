@@ -9,7 +9,7 @@ const workbook = xlsx.readFile('xlsx/data.xlsx');
 const ws = workbook.Sheets.Sheet1;
 const records = xlsx.utils.sheet_to_json(ws);
 
- xlsx 모듈을 사용하여 엑셀 파일을 읽고, 시트 데이터를 JSON 형태로 변환하여 각 URL 링크와 제목을 쉽게 접근할 수 있도록 설정했습니다. 
+**xlsx 모듈을 사용하여 엑셀 파일을 읽고, 시트 데이터를 JSON 형태로 변환하여 각 URL 링크와 제목을 쉽게 접근할 수 있도록 설정했습니다. **
 
  const crawler = async () => {
     const browser = await puppeteer.launch({ headless: false });
@@ -37,7 +37,7 @@ const records = xlsx.utils.sheet_to_json(ws);
  };
 
 
- 각 페이지에 접속하여 평점을 크롤링하고, 이를 엑셀 파일에 추가로 저장하는 작업입니다. page.evaluate 내에서 DOM을 통해 원하는 데이터를 추출하고, add_to_sheet 함수를 통해 실시간으로 엑셀 시트에 저장합니다.
+ **각 페이지에 접속하여 평점을 크롤링하고, 이를 엑셀 파일에 추가로 저장하는 작업입니다. page.evaluate 내에서 DOM을 통해 원하는 데이터를 추출하고, add_to_sheet 함수를 통해 실시간으로 엑셀 시트에 저장합니다.**
 
 
   try {
@@ -47,4 +47,4 @@ const records = xlsx.utils.sheet_to_json(ws);
  }
 
 
- 전체 크롤링 프로세스에서 발생할 수 있는 오류를 캡처하고 로그로 남겨 문제 해결에 도움이 되도록 구성하였습니다.
+** 전체 크롤링 프로세스에서 발생할 수 있는 오류를 캡처하고 로그로 남겨 문제 해결에 도움이 되도록 구성하였습니다.**
