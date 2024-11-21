@@ -15,7 +15,7 @@ const records = xlsx.utils.sheet_to_json(ws);
 
 
 
-각 페이지에 접속하여 평점을 크롤링하고, 이를 엑셀 파일에 추가로 저장하는 작업입니다. page.evaluate 내에서 DOM을 통해 원하는 데이터를 추출하고, add_to_sheet 함수를 통해 실시간으로 엑셀 시트에 저장합니다.
+각 페이지에 접속하여 평점을 크롤링하고 이를 엑셀 파일에 추가로 저장하는 작업입니다. page.evaluate 내에서 DOM을 통해 원하는 데이터를 추출하고 add_to_sheet 함수를 통해 실시간으로 엑셀 시트에 저장합니다.
 ```javascript
  const crawler = async () => {
     const browser = await puppeteer.launch({ headless: false });
